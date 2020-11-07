@@ -1,0 +1,67 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+*{
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+    font-weight: normal;
+}
+
+body{
+    padding: 0;
+    margin: 0;
+    background: #f4f4f2;
+}
+
+.cal-wrapper{
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    min-height: 100vh;    
+    grid-template-columns: repeat(4, 80px);
+    grid-template-rows: minmax(120px, auto) repeat(5 , 80px);
+}
+
+.cal-wrapper > button{
+    cursor: pointer;
+    font-size: 1.5rem;    
+    border: 1px solid white;
+    border-radius: 10px;    
+    outline: none;
+    background-color: #bbbfca;
+}
+
+.cal-wrapper .opr{
+    background-color: #495464;
+}
+
+.cal-wrapper > button:hover{
+    background-color: #e8e8e8;
+}
+
+.span-two{
+    grid-column: span 2;
+}
+
+.output-screen{
+    grid-column: 1 / -1;
+    background-color: white;
+    display: flex;
+    align-items: flex-end;
+    border-radius: 10px;
+    margin-bottom: 5px;
+    justify-content: space-around;
+    flex-direction: column;
+    padding: 10px;
+    word-wrap: break-word;
+    word-break: break-all;
+}
+
+.output-screen .pre-value{
+    color: black;
+    font-size: 1.5rem;    
+}
+
+.output-screen .current-value{
+    color: black;
+    font-size: 2.5rem;
+}
